@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Day2_Tasks
 {
-    internal struct Employee
+    internal class Employee : Person
     {
-        public string Name;
+        //public string Name;
         public double Salary;
 
         public List<Role> EmpRole;
@@ -32,6 +32,9 @@ namespace Day2_Tasks
         {
             return EmpRole != null && EmpRole.Contains(role);
         }
-
+        public override string ToString()
+        {
+            return $"Employee Name: {Name} , Age {Age}, National ID {NationalID}, Salary {Salary}";
+        }
     }
 }

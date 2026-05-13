@@ -60,5 +60,17 @@ namespace Day2_Tasks
         {
             return HashCode.Combine(X, Y, Z);
         }
+        public override string ToString()
+        {
+            return $"{X} , {Y} , {Z}";
+            ;
+        }
+        public void Display(_3DPoint[] points)
+        {
+            foreach(var point in points)
+            {
+                Console.WriteLine($"Coordinates: ({point.X}, {point.Y}, {point.Z})");
+            }
+        }
     }
 }
